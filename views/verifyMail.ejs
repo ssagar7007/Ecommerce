@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="/css/login.css">
+
+</head>
+<body>
+
+<div id="login-form-wrap">
+  <h2>Email Verification</h2>
+    <% if(message){ %>
+    <h4 style="color: rgb(4, 60, 17);font-size: 11px;"> <%= message %> to <%=email %> </h4> 
+    <% } %>
+    <form  method="post" action="/verifyMail">
+        <h3 style="margin-bottom:5px ;"><%= email %></h3>
+        <input type="submit" value="Send Verification Link">
+    </form>
+
+    
+ 
+</div>
+
+  
+</body>
+
+</html>
